@@ -30,6 +30,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    position: relative;
 
     width: 500px;
     height: 200px;
@@ -60,12 +61,29 @@ body{
     padding: .2rem;
 }
 
+.post i{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.post i:hover{
+    color: #0c193a;
+
+    transform: rotate(360deg);
+}
+
 .pre{
     display: flex;
 }
 
 .pre a{
     color: #30b96c;
+
+    cursor: pointer;
 
     transition: .5s;
 }

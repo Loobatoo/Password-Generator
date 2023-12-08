@@ -40,3 +40,26 @@ const generatePassword = () => {
 
     return password;
 };
+
+const voltar = document.querySelector("#voltar");
+
+voltar.addEventListener("click", () => {
+    Pre.style.display = 'flex';
+    Post.style.display = 'none';
+})
+
+passwordhere.addEventListener("click", () => {
+
+    textoParaCopiar = passwordhere.innerHTML;
+    
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(textoParaCopiar)
+          .then(function() {
+            alert("Texto copiado para a área de transferência!");
+          })
+          .catch(function(err) {
+            console.error("Erro ao copiar texto para a área de transferência: ", err);
+          });
+      } 
+})
+
